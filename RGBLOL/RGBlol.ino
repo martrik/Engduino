@@ -6,11 +6,12 @@ int b = 0;
 
 void setup() {
   // put your setup code here, to run once:
-  pasttime= millis();
+  
   EngduinoLEDs.begin();
 }
 
 void loop() {
+ 
   if (millis()-pasttime > 80) {
     pasttime = millis();
 
