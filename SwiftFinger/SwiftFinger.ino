@@ -32,7 +32,7 @@ void setup() {
   cycleStart = millis();
 }
 
-void loop() {  
+void loop() {
   // Idle state
   if (state == 0) {
     moveLights();
@@ -75,7 +75,7 @@ void loop() {
         counter++;
         cycleStart = millis();
       }
-      if (analogRead(4) > 30 && analogRead(4)<500) {
+      if ((analogRead(4) > 30 && analogRead(4)<500) || counter > 15) {
         state = 3;
         Serial.println(analogRead(4));
       }
